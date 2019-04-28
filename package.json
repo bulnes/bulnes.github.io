@@ -1,0 +1,19 @@
+{
+  "name": "bulnes.github.io",
+  "version": "0.1.0",
+  "description": "Scripts responsáveis por criar meu site: bulnes.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bulnes/bulnes.github.io.git"
+  },
+  "author": "Bruno Bulnes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bulnes/bulnes.github.io/issues"
+  },
+  "homepage": "https://bulnes.github.io"
+}
