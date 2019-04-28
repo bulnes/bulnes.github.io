@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bulnes/bulnes.github.io/issues"
   },
-  "homepage": "https://bulnes.github.io"
+  "homepage": "https://bulnes.github.io",
+  "devDependencies": {
+    "grunt": "^1.0.4"
+  }
 }
