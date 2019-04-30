@@ -50,14 +50,14 @@ module.exports = function(grunt) {
           collapseInlineTagWhitespace: true,
         },
         files: {
-          "index.html": "source/assets/index.html"
+          "index.html": "source/index.html"
         }
       }
     },
 
     watch: {
       scripts: {
-        files: ["source/assets/**"],
+        files: ["source/**/*"],
         tasks: ["dist"],
         options: {
           spawn: false

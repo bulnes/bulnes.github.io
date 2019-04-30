@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: radial-gradient(circle, #ecf0f1, #34495e);
+  font-family: 'Georgia', sans-serif;
+  height: 100vh;
+  width: 100vw; }
+  .main__title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; }
+    .main__title-extra {
+      font-weight: normal;
+      margin-right: 10px;
+      text-transform: none; }
+  .main__description {
+    font-size: 20px;
+    text-transform: capitalize; }
+
+/*# sourceMappingURL=base.css.map */
