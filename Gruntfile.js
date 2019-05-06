@@ -1,44 +1,13 @@
 module.exports = function(grunt) {
 
-  // project configuration
   grunt.initConfig({
 
-    clean: ["assets/"],
+    clean: ['assets/', 'index.html'],
 
     concat: {
-      css: {
-        src: ["assets/css/*"],
-        dest: "assets/css/main.css",
-      },
       js: {
-        src: ["source/assets/js/**/*", "source/assets/js/*"],
-        dest: "assets/js/main.js"
-      }
-    },
-
-    cssmin: {
-      dist: {
-        "assets/css/main.min.css": ["assets/css/main.css"]
-      }
-    },
-
-    uglify: {
-      dist: {
-        files: {
-          "assets/js/main.min.js": ["assets/js/main.js"]
-        }
-      }
-    },
-    
-    sass: {
-      assets: {
-        files: [{
-          expand: true,
-          cwd: "source/assets/sass",
-          src: ["*.scss", "*.sass"],
-          dest: "assets/css",
-          ext: ".css"
-        }]
+        src: ['source/assets/js/**/*'],
+        dest: 'assets/js/main.min.js'
       }
     },
 
@@ -47,33 +16,78 @@ module.exports = function(grunt) {
         options: {
           removeComments: true,
           collapseWhitespace: true,
-          collapseInlineTagWhitespace: true,
         },
         files: {
-          "index.html": "source/index.html"
+          'index.html': 'source/index.html'
+        }
+      },
+      dev: {
+        files: {
+          'index.html': 'source/index.html'
+        }
+      }
+    },
+
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'source/assets/images',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'assets/images'
+        }]
+      }
+    },
+
+    sass: {
+      dev: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          'assets/css/main.min.css': 'source/assets/sass/main.scss'
+        },
+      },
+      dist: {
+        options: {
+          style: 'compressed',
+        },
+        files: {
+          'assets/css/main.min.css': 'source/assets/sass/main.scss'
+        }
+      }
+    },
+
+    uglify: {
+      dist: {
+        files: {
+          'assets/js/main.min.js': ['assets/js/main.min.js']
         }
       }
     },
 
     watch: {
-      scripts: {
-        files: ["source/**/*"],
-        tasks: ["dist"],
-        options: {
-          spawn: false
-        }
+      dev: {
+        files: ['source/**/*'],
+        tasks: ['dev']
+      },
+      dist: {
+        files: ['source/**/*'],
+        tasks: ['dist']
       }
-    }
+    },
+
   });
 
-  grunt.loadNpmTasks("grunt-contrib-clean");
-  grunt.loadNpmTasks("grunt-contrib-concat");
-  grunt.loadNpmTasks("grunt-contrib-cssmin");
-  grunt.loadNpmTasks("grunt-contrib-htmlmin");
-  grunt.loadNpmTasks("grunt-contrib-sass");
-  grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   
-  grunt.registerTask("dist", ["clean", "sass", "concat", "uglify", "htmlmin"]);
-  grunt.registerTask("default", ["dist", "watch"]);
+  grunt.registerTask('dev', ['clean', 'sass:dev', 'concat:js', 'htmlmin:dev', 'imagemin', 'watch:dev']);
+  grunt.registerTask('dist', ['clean', 'sass:dist', 'concat:js', 'htmlmin:dist', 'imagemin', 'uglify:dist', 'watch:dist']);
+  grunt.registerTask('default', ['dist']);
 };
