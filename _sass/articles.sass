@@ -12,6 +12,9 @@
 
     *
       margin-bottom: auto
+    
+    &__title
+      margin-bottom: 10px
 
     &::after
       content: ' '
@@ -24,3 +27,24 @@
       position: absolute
       top: 0
       left: 0
+  
+  @media (min-width: $media-break)
+
+    &
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      max-width: 700px
+
+      .article
+        min-height: 250px
+        width: 48%
+        max-width: 48%
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        *
+          margin-bottom: 10px

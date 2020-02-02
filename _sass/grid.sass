@@ -8,20 +8,26 @@
 
   .page--home &
     flex-direction: column-reverse
-
-  &::after
-    content: ' '
-    background-color: $color-dark
-    
-    display: block
-    height: 5px
-    width: 100%
-    
-    position: absolute
-    top: 0
-    left: 0
   
   &__main, &__profile
     margin-left: 10px
     margin-right: 10px
     margin-bottom: 30px
+  
+  @media (min-width: $media-break)
+
+    &, .page--home &
+      flex-direction: row
+      max-width: 1030px
+      margin-left: auto
+      margin-right: auto
+    
+    &__main
+      flex-grow: 6
+      margin: 0 30px 0 0
+      max-width: 700px
+    
+    &__profile
+      flex-grow: 1
+      margin: 0
+      width: 300px

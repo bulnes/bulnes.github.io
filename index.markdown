@@ -14,9 +14,7 @@ type: page--home
       <a href="{{ post.url }}" title="{{ post.title }}" class="article__title">{{ post.title }}</a>
     </h3>
 
-    <time datetime="{{ post.date | html5date }}">
-      <a href="{{ post.url }}" title="{{ post.title }}" class="article__date">{{ post.date | shorterBrazilianDate }}</a>
-    </time>
+    <p class="article__categories">Categorias: {{ post.categories | join: ', ' }}</p>
 
   </li>
   {% endfor %}
