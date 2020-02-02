@@ -1,0 +1,27 @@
+.container
+  display: flex
+  flex-direction: column
+  position: relative
+
+  padding-top: 30px
+  padding-bottom: 30px
+
+  .page--home &
+    flex-direction: column-reverse
+
+  &::after
+    content: ' '
+    background-color: $color-dark
+    
+    display: block
+    height: 5px
+    width: 100%
+    
+    position: absolute
+    top: 0
+    left: 0
+  
+  &__main, &__profile
+    margin-left: 10px
+    margin-right: 10px
+    margin-bottom: 30px

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="https://avatars0.githubusercontent.com/u/1587748?s=16">
+    <title>Teste</title>
+
+    <!-- seo_tags -->
+    <meta name="title" content="Título">
+    <meta name="description" content="Descrição">
+    <meta name="keywords" content="palavras, chaves">
+    <meta name="robots" content="index, follow">
+
+    <link rel="author" href="https://www.linkedin.com/in/brunocesarbulnes">
+    <link rel="publisher" href="https://www.linkedin.com/in/brunocesarbulnes">
+
+    <link rel="canonical" href="{{ page.url }}">
+    <!-- ./seo_tags -->
+
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="{{ page.type }}">
+
+    <div class="container">
+
+      <main class="container__main">
+        {{ content }}
+      </main>
+
+      <aside class="container__profile">
+        {% include profile.html %}
+      </aside>
+      
+    </div>
+
+  </body>
+</html>

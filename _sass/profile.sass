@@ -1,0 +1,42 @@
+.profile
+  background-color: $color-dark
+  border-radius: $border-radius
+  color: $color-bright
+  display: block
+  padding: 30px
+
+  position: sticky
+  top: 30px
+
+  &__figure, &__links, &__externals
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    margin-bottom: 25px
+    text-align: center
+
+  &__photo
+    border-radius: 50%
+    height: 100px
+    width: 100px
+    margin-bottom: 10px
+  
+  &__name, &__description
+    font-weight: normal
+  
+  &__name
+    font-size: $heading-size-4
+  
+  &__description
+    font-size: $heading-size-6
+
+  &__links
+    flex-direction: row
+    margin-bottom: 0
+  
+  &__link
+    color: $color-bright
+  
+    & + &,
+      margin-left: 20px
