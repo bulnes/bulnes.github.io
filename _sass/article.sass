@@ -1,24 +1,33 @@
 .article
-  display: flex
-  flex-direction: column
-  position: relative
+  width: 100%
+  margin: 5rem auto 10rem 
+  word-wrap: break-word
 
-  *
-    margin-bottom: 1rem
+  &__content 
+    > * 
+      margin: 0 auto 1.75rem
+      max-width: 660px
+
+    > p
+      font-size: 1.1rem
 
   &__header
-    border-bottom: 1px solid $color-dark
-    margin-bottom: 30px
-  
-  &__title, &__date
-    color: $color-default
-    display: block
-    
-    text-decoration: none
-  
+    font-size: .875rem
+    line-height: 1.5
+    margin: 0 auto 1.5rem
+    text-align: center
+
   &__title
-    font-size: $heading-size-4
+    font-size: 3.25rem
+    text-decoration: none
+
+    @media screen and ( max-width: $mobile-default-breakpoint )
+      font-size: 2rem
   
-  &__date
-    font-size: $heading-size-6
+  &__author-photo
+    border-radius: 50%
+    height: 40px
+    width: 40px
   
+  &__author-name, &__date
+    color: $text-color-fade
