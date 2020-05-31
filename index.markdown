@@ -19,7 +19,18 @@ type: page--home
   </header>
 
   <main class="article__content">
-    {{ post.content }}
+    {% if post.content contains "<!-- more -->" %}
+
+      {{ post.content | split:"<!-- more -->" | first }}
+      <p class="article__keep-reading-container">
+        <a href="{{ post.url }}" class="article__keep-reading" title="Continuar lendo este artigo">Continue lendo</a>
+      </p>
+
+    {% else %}
+
+      {{ post.content }}
+
+    {% endif %}
   </main>
 
 </article>

@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: page
+date: 2020-05-31
 title: Sobre mim
 permalink: /about.html
 ---  
