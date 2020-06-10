@@ -1,0 +1,18 @@
+<script>
+  var pageScripts = [
+    '//www.googletagmanager.com/gtag/js?id=UA-13097282-16',
+  ];
+
+  window.addEventListener('load', function() {
+    var dependencies = document.createDocumentFragment();
+
+    for (var i = 0; i < pageScripts.length; i++) {
+      var script = document.createElement('script');
+      script.src = pageScripts[i];
+      script.async = true;
+      dependencies.appendChild(script);
+    }
+
+    document.body.appendChild(dependencies);
+  });
+</script>

@@ -19,6 +19,8 @@ layout: compress
     {% include seo.html %}
 
     <link rel="stylesheet" href="/css/style.css">
+
+    {% include head.js.html %}
   </head>
 
   <body class="{{ page.type }}">
@@ -28,6 +30,8 @@ layout: compress
       {% include content.html %}
       {% include footer.html %}      
     </div>
+
+    {% include body.js.html %}
 
   </body>
 </html>
