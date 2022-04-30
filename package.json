@@ -8,7 +8,7 @@
     "lint": "next lint",
     "prepare": "husky install",
     "build": "next build && next export -o docs/",
-    "send:blog": "git add . && git commit -m 'build: blog' && git pull --rebase origin $(git branch --show-current) && git push -u origin $(git branch --show-current) --no-verify -q && exit",
+    "send:blog": "git add . && git commit -m 'build: blog' && git push -u -f origin $(git branch --show-current) --no-verify",
     "build:blog": "yarn build && yarn send:blog"
   },
   "dependencies": {
