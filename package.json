@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export -o docs/",
-    "build:blog": "yarn build && git add . && git commit -m 'build: blog' && git push -u origin $(git branch --show-current) --no-verify",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "next build && next export -o docs/",
+    "build:blog": "yarn update:local && yarn build && yarn send:blog",
+    "update:local": "git pull origin $(git branch --show-current) --rebase",
+    "send:blog": "git add . && git commit -m 'build: blog' && git push -u origin $(git branch --show-current) --no-verify"
   },
   "dependencies": {
     "next": "12.1.5",
