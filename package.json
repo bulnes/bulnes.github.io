@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export -o docs/",
-    "build:blog": "yarn build && git add . && git commit -m 'task: updating blog structure' --no-verify",
+    "build:blog": "yarn lint",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install"
