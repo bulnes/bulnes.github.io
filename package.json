@@ -8,9 +8,9 @@
     "lint": "next lint",
     "prepare": "husky install",
     "build": "next build && next export -o docs/",
-    "build:blog": "yarn update:local && yarn build && yarn send:blog",
+    "build:blog": "yarn build && yarn send:blog",
     "update:local": "git pull origin $(git branch --show-current) --rebase",
-    "send:blog": "git add . && git commit -m 'build: blog' && git push -u origin $(git branch --show-current) --no-verify"
+    "send:blog": "git add . && git commit -m 'build: blog' && yarn update:local && git push -u origin $(git branch --show-current) --no-verify"
   },
   "dependencies": {
     "next": "12.1.5",
