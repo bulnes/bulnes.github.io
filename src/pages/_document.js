@@ -1,12 +1,12 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="pt-br">
       <Head />
 
-      <body className="h-screen bg-stone-200">
-        <div className="mx-3 md:mx-auto max-w-2xl">
+      <body className="bg-background">
+        <div className="max-w-content mx-auto px-8 pb-0 pt-16">
           <Main />
         </div>
 

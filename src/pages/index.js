@@ -1,5 +1,8 @@
-import { Header } from "@/components/Header";
-import { Summary } from "@/components/Summary";
+import { Footer } from "@/pageComponents/Footer";
+import { HomeHeader } from "@/pageComponents/HomeHeader";
+import { Newsletter } from "@/pageComponents/Newsletter";
+import { ProjectsList } from "@/pageComponents/ProjectsList";
+import { ThoughtsList } from "@/pageComponents/ThoughtsList";
 import Head from "next/head";
 
 export default function Home() {
@@ -11,10 +14,12 @@ export default function Home() {
 
         <title>Bruno Bulnes</title>
       </Head>
-      <Header />
-      <Summary />
 
-      <main>Em breve, mais conteúdo aqui na index!</main>
+      <HomeHeader />
+      <ProjectsList />
+      <ThoughtsList />
+      <Newsletter />
+      <Footer />
     </>
   );
 }

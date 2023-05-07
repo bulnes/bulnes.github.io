@@ -1,21 +1,21 @@
-import { AboutMe } from "@/pageComponents/AboutMe";
 import { Footer } from "@/pageComponents/Footer";
 import { Header } from "@/pageComponents/Header";
 import { Newsletter } from "@/pageComponents/Newsletter";
+import { ThoughtsList } from "@/pageComponents/ThoughtsList";
 import Head from "next/head";
 
-export default function About() {
+export default function Thoughts() {
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>About - Bruno Bulnes</title>
+        <title>Toughts - Bruno Bulnes</title>
       </Head>
 
       <Header />
-      <AboutMe />
+      <ThoughtsList />
       <Newsletter />
       <Footer />
     </>
