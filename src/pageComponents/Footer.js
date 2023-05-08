@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="mb-8 py-4">
@@ -6,10 +8,21 @@ export function Footer() {
           <p>&copy; 2023 - Bruno Bulnes</p>
 
           <nav className="flex items-center justify-center gap-3">
-            <span>Home</span>
-            <span>Projects</span>
-            <span>Thoughts</span>
-            <span>Contact</span>
+            <Link href={"/"} title="Home">
+              Home
+            </Link>
+
+            <Link href={"/projects"} title="Projects">
+              Projects
+            </Link>
+
+            <Link href={"/thoughts"} title="Thoughts">
+              Thoughts
+            </Link>
+
+            <Link href={"/about"} title="About">
+              About
+            </Link>
           </nav>
         </div>
       </div>
