@@ -21,3 +21,9 @@ export default function Projects() {
     </>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}

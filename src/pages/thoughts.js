@@ -21,3 +21,9 @@ export default function Thoughts() {
     </>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}
