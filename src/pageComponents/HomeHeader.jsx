@@ -1,20 +1,13 @@
+import { ProfilePicture } from "@/components/ProfilePicture";
 import { outfitFont } from "@/utils/fonts";
-import Image from "next/image";
 
 export function HomeHeader() {
   return (
-    <header className="mb-8 flex flex-col gap-8">
-      <Image
-        src="/profile.jpeg"
-        alt=""
-        width={175}
-        height={175}
-        loading="lazy"
-        className="rounded-full"
-      />
+    <header className="mb-16 flex flex-col gap-8">
+      <ProfilePicture width={175} height={175} />
 
       <h1
-        className={`flex flex-col font-bold text-4xl text-text ${outfitFont.className}`}
+        className={`flex flex-col font-bold text-3xl md:text-4xl text-text ${outfitFont.className}`}
       >
         <span>Hey, I&apos;m John Smith.</span>
         <span>

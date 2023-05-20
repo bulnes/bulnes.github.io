@@ -1,6 +1,6 @@
 export function ExpandList() {
   return (
-    <ul className="list-none p-0 py-2">
+    <ul className="list-none p-0">
       <li className="bg-card-background rounded-2xl p-4 flex flex-col gap-2 mb-2">
         <p className="flex items-center justify-between">
           <span className="font-bold text-2xl text-black">minilio</span>

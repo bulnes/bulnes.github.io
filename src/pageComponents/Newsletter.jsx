@@ -2,8 +2,8 @@ import { HeadingSecond } from "@/components/Heading";
 
 export function Newsletter() {
   return (
-    <div className="mb-8 py-4 bg-card-background rounded-2xl">
-      <form className="p-4">
+    <div className="mb-16 bg-card-background rounded-2xl">
+      <form className="px-4 py-6">
         <HeadingSecond>Newsletter</HeadingSecond>
 
         <p className="mb-4 font-medium text-base text-text">
@@ -18,8 +18,8 @@ export function Newsletter() {
             className="px-4 py-2 rounded-lg placeholder:text-text col-span-3"
           />
 
-          <button className="flex items-center justify-center gap-2 rounded-lg px-4 py-2 bg-text text-background">
-            Sign Up
+          <button className="flex items-center justify-center gap-0 md:gap-2 rounded-lg px-4 py-2 bg-text text-background">
+            <span className="text-sm md:text-base">Sign Up</span>
           </button>
         </div>
       </form>

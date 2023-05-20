@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="mb-8 py-4">
+    <footer className="mb-16">
       <div className="border-t border-solid border-text py-4">
-        <div className="flex items-center justify-between text-xs">
-          <p>&copy; 2023 - Bruno Bulnes</p>
+        <div className="text-xs flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
+          <p>&copy; 2023, Bruno Bulnes</p>
 
           <nav className="flex items-center justify-center gap-3">
             <Link href={"/"} title="Home">

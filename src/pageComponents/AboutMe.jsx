@@ -1,6 +1,6 @@
 export function AboutMe() {
   return (
-    <div className="mb-8 font-medium text-base text-text flex flex-col gap-8">
+    <div className="mb-16 font-medium text-base text-text flex flex-col gap-8">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel
         consequuntur minima non, nostrum hic? Quia quisquam similique animi
