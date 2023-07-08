@@ -7,19 +7,19 @@ export function Newsletter() {
         <HeadingSecond>Newsletter</HeadingSecond>
 
         <p className="mb-4 font-medium text-base text-text">
-          Sign up below to receive monthly updates from me straight in your
-          inbox.
+          Inscreva-se abaixo para receber atualizações diretamente em sua caixa
+          de entrada.
         </p>
 
-        <div className="grid grid-cols-4 gap-2">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
           <input
             type="email"
             placeholder="Email"
-            className="px-4 py-2 rounded-lg placeholder:text-text col-span-3"
+            className="px-4 py-2 rounded-lg placeholder:text-text w-full md:w-auto grow"
           />
 
           <button className="flex items-center justify-center gap-0 md:gap-2 rounded-lg px-4 py-2 bg-text text-background">
-            <span className="text-sm md:text-base">Sign Up</span>
+            <span className="text-sm md:text-base">Inscrever-se</span>
           </button>
         </div>
       </form>

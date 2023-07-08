@@ -1,5 +1,6 @@
 import { ProfilePicture } from "@/components/ProfilePicture";
 import { outfitFont } from "@/utils/fonts";
+import Link from "next/link";
 
 export function HomeHeader() {
   return (
@@ -9,20 +10,22 @@ export function HomeHeader() {
       <h1
         className={`flex flex-col font-bold text-3xl md:text-4xl text-text ${outfitFont.className}`}
       >
-        <span>Hey, I&apos;m John Smith.</span>
+        <span>Olá, me chamo Bruno.</span>
         <span>
-          I&apos;m a front-end developer & designer based in London, UK.
+          Sou engenheiro de software focado em desenvolvimento front-end.
         </span>
       </h1>
 
       <p className="font-medium text-base text-text">
-        Right now, I&apos;ve just launched this minimal portfolio template
-        you&apos;re viewing (get it here). I&apos;m also working on my own
-        projects, sharing my thoughts on my blog and I document my whole journey
-        on Twitter.
+        Estou trabalhando em meus próprios projetos, compartilhando meus
+        pensamentos e documentando toda a minha jornada no meu blog.
       </p>
 
-      <p className="font-medium text-base text-text">Get in touch →</p>
+      <p className="font-medium text-base text-text">
+        <Link href={"/about"} title="Clique aqui para saber mais sobre mim">
+          Saiba mais sobre mim aqui.
+        </Link>
+      </p>
     </header>
   );
 }

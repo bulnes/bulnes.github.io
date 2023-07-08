@@ -13,15 +13,15 @@ export function Footer() {
             </Link>
 
             <Link href={"/projects"} title="Projects">
-              Projects
+              Projetos
             </Link>
 
             <Link href={"/thoughts"} title="Thoughts">
-              Thoughts
+              Blog
             </Link>
 
             <Link href={"/about"} title="About">
-              About
+              Sobre
             </Link>
           </nav>
         </div>

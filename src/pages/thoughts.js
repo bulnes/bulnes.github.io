@@ -15,7 +15,7 @@ export default function Thoughts() {
       </Head>
 
       <Header />
-      <ThoughtsList />
+      <ThoughtsList hideLink={true} />
       <Newsletter />
       <Footer />
     </>

@@ -5,10 +5,7 @@ import Link from "next/link";
 export function Header() {
   return (
     <header>
-      <Link
-        href={"/"}
-        className="mb-16 flex items-center gap-4 hover:text-text"
-      >
+      <Link href={"/"} className="mb-16 flex items-center gap-4">
         <ProfilePicture width={100} height={100} />
 
         <p

@@ -15,7 +15,7 @@ export default function Projects() {
       </Head>
 
       <Header />
-      <ProjectsList />
+      <ProjectsList hideLink={true} />
       <Newsletter />
       <Footer />
     </>
