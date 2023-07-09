@@ -1,23 +1,30 @@
-export function CompactList() {
+import Link from "next/link";
+
+export function CompactList({ posts: allPosts = [], baseLink, maxItems }) {
+  const posts = maxItems ? allPosts.slice(0, maxItems) : allPosts;
+
   return (
     <ul className="list-none border-b border-solid border-text">
-      <li className="py-4 pr-20 border-t border-solid border-text">
-        <span className="font-medium text-base text-text no-underline">
-          The Importance of UX in Website Design
-        </span>
-      </li>
+      {posts.map((post, index) => {
+        const { frontmatter, slug } = post;
+        const { title } = frontmatter;
+        const postLink = `/${baseLink}/${slug}`;
 
-      <li className="py-4 pr-20 border-t border-solid border-text">
-        <span className="font-medium text-base text-text no-underline">
-          5 Essential Web Design Tools You Need
-        </span>
-      </li>
-
-      <li className="py-4 pr-20 border-t border-solid border-text">
-        <span className="font-medium text-base text-text no-underline">
-          Responsive Web Design: Why It Matters
-        </span>
-      </li>
+        return (
+          <li
+            key={`post-${index}`}
+            className="py-4 pr-20 border-t border-solid border-text"
+          >
+            <Link
+              href={postLink}
+              title={title}
+              className="font-medium text-base text-text no-underline"
+            >
+              <span>{title}</span>
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }

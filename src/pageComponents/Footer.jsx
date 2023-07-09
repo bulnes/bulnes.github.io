@@ -17,7 +17,7 @@ export function Footer() {
             </Link>
 
             <Link href={"/thoughts"} title="Thoughts">
-              Blog
+              Pensamentos
             </Link>
 
             <Link href={"/about"} title="About">

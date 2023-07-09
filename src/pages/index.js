@@ -3,9 +3,10 @@ import { HomeHeader } from "@/pageComponents/HomeHeader";
 import { Newsletter } from "@/pageComponents/Newsletter";
 import { ProjectsList } from "@/pageComponents/ProjectsList";
 import { ThoughtsList } from "@/pageComponents/ThoughtsList";
+import getAllPosts from "@/utils/get-all-posts";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -17,7 +18,7 @@ export default function Home() {
 
       <HomeHeader />
       <ProjectsList />
-      <ThoughtsList />
+      <ThoughtsList posts={posts} maxItems={3} />
       <Newsletter />
       <Footer />
     </>
@@ -25,7 +26,7 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
-  return {
-    props: {},
-  };
+  const posts = getAllPosts();
+
+  return { props: { posts } };
 }

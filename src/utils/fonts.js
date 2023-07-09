@@ -6,6 +6,6 @@ export const robotoFont = Roboto_Mono({
 });
 
 export const outfitFont = Outfit({
-  weight: ["700"],
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });

@@ -10,10 +10,8 @@ export function HomeHeader() {
       <h1
         className={`flex flex-col font-bold text-3xl md:text-4xl text-text ${outfitFont.className}`}
       >
-        <span>Olá, me chamo Bruno.</span>
-        <span>
-          Sou engenheiro de software focado em desenvolvimento front-end.
-        </span>
+        <span>Olá, sou o Bruno.</span>
+        <span>Engenheiro de Software focado em desenvolvimento Web.</span>
       </h1>
 
       <p className="font-medium text-base text-text">
