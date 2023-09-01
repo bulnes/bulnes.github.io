@@ -1628,10 +1628,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-marked-gfm-heading-id@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/marked-gfm-heading-id/-/marked-gfm-heading-id-3.0.4.tgz#cc54976b6c1e507f2abf7067208e5d135ef5c792"
-  integrity sha512-k22f+k8B449kRVXbi3OYxahI6t8HywKIF0wn0L0atzYhFHYRcJynLDekh+lcxcZkNnkEGRZOHuRfTcpjMjLqDw==
+marked-gfm-heading-id@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/marked-gfm-heading-id/-/marked-gfm-heading-id-3.0.6.tgz#0d2ed4ffc221171170920b0bcb48e2fe68487f65"
+  integrity sha512-ot/iTTxvSJpUWv+DJ5aGVj2kxdEpsiKj6NJy6icwcdrVPHsbAE3dZ3Usk4ORt8ke2HKbw83n5Q5jNwSMuAYMSA==
   dependencies:
     github-slugger "^2.0.0"
 
