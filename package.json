@@ -22,7 +22,7 @@
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.4",
     "gray-matter": "^4.0.3",
-    "marked": "^9.1.2",
+    "marked": "^9.1.4",
     "marked-gfm-heading-id": "^3.0.4",
     "marked-mangle": "^1.1.0",
     "postcss": "^8.4.27",
