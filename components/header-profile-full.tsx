@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Anchor } from "./anchor";
 import { ArrowLinkIcon } from "./arrow-link-icon";
 import { Heading1 } from "./heading-1";
@@ -6,7 +7,7 @@ import { Paragraph } from "./paragraph";
 export function HeaderProfileFull() {
   return (
     <header className="mt-16 mb-8 flex flex-col items-start justify-center gap-8">
-      <img
+      <Image
         src="/me.jpeg"
         alt=""
         width={175}

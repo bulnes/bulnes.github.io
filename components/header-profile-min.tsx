@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Heading1 } from "./heading-1";
 
@@ -9,7 +10,7 @@ export function HeaderProfileMin() {
         aria-label="Go to homepage"
         className="mt-16 mb-8 flex flex-row items-center justify-start gap-4"
       >
-        <img
+        <Image
           src="/me.jpeg"
           alt=""
           width={100}
