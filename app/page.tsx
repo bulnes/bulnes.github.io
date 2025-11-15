@@ -63,27 +63,29 @@ const thoughts = [
 export default function Home() {
   return (
     <Container>
-      <HeaderProfileFull />
+      <main>
+        <HeaderProfileFull />
 
-      {/* Projects */}
-      <Section>
-        <SectionHeader>
-          <Heading2>Projects</Heading2>
-          <Anchor href="#">See all</Anchor>
-        </SectionHeader>
+        {/* Projects */}
+        <Section>
+          <SectionHeader>
+            <Heading2>Projects</Heading2>
+            <Anchor href="#">See all</Anchor>
+          </SectionHeader>
 
-        <CardProjects projects={projects} />
-      </Section>
+          <CardProjects projects={projects} />
+        </Section>
 
-      {/* Thoughts */}
-      <Section>
-        <SectionHeader>
-          <Heading2>Thoughts</Heading2>
-          <Anchor href="#">See all</Anchor>
-        </SectionHeader>
+        {/* Thoughts */}
+        <Section>
+          <SectionHeader>
+            <Heading2>Thoughts</Heading2>
+            <Anchor href="#">See all</Anchor>
+          </SectionHeader>
 
-        <CardThoughts thoughts={thoughts} />
-      </Section>
+          <CardThoughts thoughts={thoughts} />
+        </Section>
+      </main>
 
       {/* Newsletter */}
       <Section>

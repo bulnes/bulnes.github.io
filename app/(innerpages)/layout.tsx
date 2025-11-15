@@ -13,7 +13,7 @@ export default function RootLayout({
     <Container>
       <HeaderProfileMin />
 
-      {children}
+      <main>{children}</main>
 
       {/* Newsletter */}
       <Section>
